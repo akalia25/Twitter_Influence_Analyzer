@@ -17,7 +17,13 @@ The dependent variable that the model predicts is a binary variable that describ
 
 One of the key explanatory variables in the tweet-analysis model would be text contents of all tweets posted by Donald Trump on a single day. It will be collected in the format of pure text. Since the primary function of the system is to perform predictive analysis based on his tweets, it is extremely crucial to capture all the words he posted to find a correlation between the change in his approval rate and specific vocabularies from his tweets.
 
-The confusion matrix for the Machine Learning Algorithms follows as below : (for a detailed report please see project_report document) 
+
+KMean:
+To perform K-mean clustering on the tweets, all the tweets are transformed into bag of words as discussed in feature transformation. The distances between each tweet is computed using Jaccard distance in which the all words with a value of 0 in the bag of words is disregarded because matching zeros do not contribute to the similarity of two tweets. Based on the distance matrix, the cluster centers can be identified by going through iterations for K-mean clustering. The results can be visualized on a scatter plot. In addition, in order to clearly show the topic clusters, the top 5 frequently used words in each cluster is displayed to represent the cluster 
+![alt text](https://github.com/akalia25/Twitter_Influence_Analyzer/blob/master/Screenshots/K-Mean%20clustering-2.png)
+
+
+The confusion matrix for the Machine Learning Algorithms as well a brief summary on the model follows as below : (for a detailed report please see project_report document) 
 
 
 Naive Bayes:
@@ -41,10 +47,6 @@ Compared to the first two model, XGBoost performs better than randomforest but w
 Confusion Matrix:
 39 16
 26 13
-
-KMean:
-To perform K-mean clustering on the tweets, all the tweets are transformed into bag of words as discussed in feature transformation. The distances between each tweet is computed using Jaccard distance in which the all words with a value of 0 in the bag of words is disregarded because matching zeros do not contribute to the similarity of two tweets. Based on the distance matrix, the cluster centers can be identified by going through iterations for K-mean clustering. The results can be visualized on a scatter plot. In addition, in order to clearly show the topic clusters, the top 5 frequently used words in each cluster is displayed to represent the cluster 
-![alt text](https://github.com/akalia25/Twitter_Influence_Analyzer/blob/master/Screenshots/K-Mean%20clustering-2.png)
 
 
 Conclusion
